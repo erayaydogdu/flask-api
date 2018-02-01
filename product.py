@@ -2,8 +2,7 @@
 from flask import Flask, jsonify
 from flask import make_response
 from flask import request
-from flask_cors import CORS
-
+ 
 products = [
     {
         'id': 1000,
@@ -32,7 +31,6 @@ products = [
 ]
  
 app = Flask(__name__)
-CORS(app)
  
 @app.route('/api/products', methods=['GET'])
 def get_products():
